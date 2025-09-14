@@ -40,13 +40,13 @@ function App() {
       <>
       <NavBar></NavBar>
       <BlogTableComponent blogs={blogs}/>
-      <BlogList  blogs={blogs}/>
+      <BlogList  blogs={blogs}/>  
       </>
     )
 
   return (
     <div className="App">
-
+      <App/>
     </div>
   );
 }
