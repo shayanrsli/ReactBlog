@@ -6,5 +6,10 @@ export  interface Iblog {
 }
 
 export interface IPropsBlog {
-    blogs : Iblog[]
+    blogs : Iblog[] , 
+    blog : Iblog , 
+    key : number
 }
+
+export type propBlog = Omit<IPropsBlog , "blogs">
+export type PropsBlogs = Omit<IPropsBlog , "blog" | "key">

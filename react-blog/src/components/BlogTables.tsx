@@ -1,8 +1,8 @@
 import { FC } from "react";
 import { useNavigate } from "react-router-dom";
 import { useCookies } from "react-cookie";
-import { IPropsBlog } from "../types/blog.types";
-const BlogTableComponent: FC<IPropsBlog> = ({ blogs }) => {
+import { IPropsBlog, PropsBlogs } from "../types/blog.types";
+const BlogTableComponent: FC<PropsBlogs> = ({ blogs }) => {
 
     const history = useNavigate()
     return (

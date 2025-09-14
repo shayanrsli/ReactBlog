@@ -4,6 +4,7 @@ import './index.css';
 import BlogCardComponent from './components/BlogCard';
 import BlogTableComponent from './components/BlogTables';
 import { Iblog } from './types/blog.types';
+import BlogList from './components/BlogsList';
 
 
 function App() {
@@ -35,13 +36,17 @@ function App() {
     const [blogs, setBlogs] = useState<Iblog[]>(blogData);
 
 
+    const App = () => (
+      <>
+      <NavBar></NavBar>
+      <BlogTableComponent blogs={blogs}/>
+      <BlogList  blogs={blogs}/>
+      </>
+    )
 
   return (
     <div className="App">
-      <NavBar></NavBar>
 
-      <BlogTableComponent blogs={blogs} />
-      <BlogCardComponent blogs={blogs} />
     </div>
   );
 }
