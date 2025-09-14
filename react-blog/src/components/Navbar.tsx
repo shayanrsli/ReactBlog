@@ -82,36 +82,39 @@ export default function NavBar() {
 
                         {/* Mobile buttons */}
                         <div className="mt-3 space-y-2 md:hidden">
-                            <a
-                                href="javascript:void(0)" onClick={() => setShowLoginModal(true)}
-                                className="inline-block w-full px-4 py-2 text-center text-white bg-gray-600 rounded-md shadow hover:bg-gray-800"
-                            >
-                                Sign in
-                            </a>
-                            <a
-                                href="javascript:void(0)" onClick={() => setShowRegisterModal(true)}
-                                className="inline-block w-full px-4 py-2 text-center text-gray-800 bg-white rounded-md shadow hover:bg-gray-100"
-                            >
-                                Sign up
-                            </a>
+<button
+    onClick={() => setShowLoginModal(true)}
+    className="px-4 py-2 text-white bg-gray-600 rounded-md shadow hover:bg-gray-800"
+>
+    Sign in
+</button>
+
+<button
+    onClick={() => setShowRegisterModal(true)}
+    className="px-4 py-2 text-gray-800 bg-white rounded-md shadow hover:bg-gray-100"
+>
+    Sign up
+</button>
+
                         </div>
                     </div>
                 </div>
 
                 {/* Desktop buttons */}
                 <div className="hidden space-x-2 md:inline-block">
-                    <a
-                        href="javascript:void(0)" onClick={() => setShowLoginModal(true)}
-                        className="px-4 py-2 text-white bg-gray-600 rounded-md shadow hover:bg-gray-800"
-                    >
-                        Sign in
-                    </a>
-                    <a
-                        href="javascript:void(0)" onClick={() => setShowRegisterModal(true)}
-                        className="px-4 py-2 text-gray-800 bg-white rounded-md shadow hover:bg-gray-100"
-                    >
-                        Sign up
-                    </a>
+<button
+    onClick={() => setShowLoginModal(true)}
+    className="px-4 py-2 text-white bg-gray-600 rounded-md shadow hover:bg-gray-800"
+>
+    Sign in
+</button>
+
+<button
+    onClick={() => setShowRegisterModal(true)}
+    className="px-4 py-2 text-gray-800 bg-white rounded-md shadow hover:bg-gray-100"
+>
+    Sign up
+</button>
                 </div>
             </div>
         </nav>
