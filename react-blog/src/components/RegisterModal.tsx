@@ -8,12 +8,19 @@ interface IProps {
     setShowRegisterModal: Dispatch<SetStateAction<boolean>>
 }
 const RegisterModalComponent: FC<IProps> = ({ setShowRegisterModal }) => {
-
+    const [fullName, setFullName] = useState<string>("");
     const [username, setUsername] = useState<string>("");
     const [password, setPassword] = useState<string>("");
     const resetForm = (): void => {
         setPassword("");
         setUsername("");
+        setFullName("");
+    }
+
+    const RegisterHandler = () => {
+        console.log(username , fullName , password);
+        resetForm();
+        setShowRegisterModal(false)
     }
 
 
@@ -37,6 +44,15 @@ const RegisterModalComponent: FC<IProps> = ({ setShowRegisterModal }) => {
                                         <form>
                                             <div className="mt-4">
                                                 <div className="flex flex-col items-start">
+                                                    <input type="text" name="fullName" placeholder="fullName"
+                                                        onChange={(e) => setFullName(e.target.value)}
+                                                        value={fullName}
+                                                        className="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                                                    />
+                                                </div>
+                                            </div>
+                                            <div className="mt-4">
+                                                <div className="flex flex-col items-start">
                                                     <input type="text" name="username" placeholder="userName"
                                                         onChange={(e) => setUsername(e.target.value)}
                                                         value={username}
@@ -58,6 +74,9 @@ const RegisterModalComponent: FC<IProps> = ({ setShowRegisterModal }) => {
                                             <button
                                                 className="w-full mt-2 p-2.5 flex-1 text-white bg-green-600 rounded-md outline-none ring-offset-2 ring-red-600 focus:ring-2"
                                                 // onClick={LoginHandler}
+                                                onClick={() =>
+                                                    RegisterHandler()
+                                                }
                                             >
                                                 Login
                                             </button>

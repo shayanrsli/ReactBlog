@@ -16,6 +16,12 @@ const LoginModalComponent: FC<IProps> = ({ setShowLoginModal }) => {
         setUsername("");
     }
 
+        const LoginHandler = () => {
+        console.log(username  , password);
+        resetForm();
+        setShowLoginModal(false)
+    }
+
 
     return (
         <div className="fixed inset-0 z-10 overflow-y-auto">
@@ -57,7 +63,7 @@ const LoginModalComponent: FC<IProps> = ({ setShowLoginModal }) => {
                                         <div className="items-center gap-2 mt-3 sm:flex">
                                             <button
                                                 className="w-full mt-2 p-2.5 flex-1 text-white bg-green-600 rounded-md outline-none ring-offset-2 ring-red-600 focus:ring-2"
-                                                // onClick={LoginHandler}
+                                                onClick={LoginHandler}
                                             >
                                                 Login
                                             </button>
