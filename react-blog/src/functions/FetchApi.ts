@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { TGetApiResponse , TPostApiResponse } from "../../types/public.types";
+import { TGetApiResponse , TPostApiResponse } from "../types/public.types";
 import axios, { AxiosError, AxiosRequestConfig } from "axios"
 const BackEndURL = "http://localhost:3700"
 export const useApiPost = (): TPostApiResponse => {

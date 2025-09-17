@@ -1,5 +1,5 @@
 import { Dispatch, FC, SetStateAction, useEffect, useState } from "react";
-import { useApiPost } from "./functions/FetchApi";
+import { useApiPost } from "../functions/FetchApi";
 import { useCookies } from "react-cookie";
 
 

@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useCookies } from "react-cookie";
 import BlogsList from "../components/BlogsList";
 import { COOKIE_NAMES } from "../enums/public.enums";
-import { useApiGet } from "../components/functions/FetchApi";
+import { useApiGet } from "../functions/FetchApi";
 import { Iblog } from "../types/blog.types";
 
 export default function BlogPage(){

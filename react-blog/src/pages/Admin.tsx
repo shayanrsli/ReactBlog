@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useCookies } from "react-cookie";
 import BlogTableComponent from "../components/BlogTables";
-import { useApiGet } from "../components/functions/FetchApi";
+import { useApiGet } from "../functions/FetchApi";
 import { Iblog } from "../types/blog.types";
 
 export default function AdminPage() {
